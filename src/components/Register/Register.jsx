@@ -45,7 +45,7 @@ export default function Register() {
     }
 
     // Enviar solicitud al servidor solo si pasa todas las validaciones
-    const response = await fetch('http://localhost:3000/api/register', {
+    const response = await fetch('https://test-deploy-backend-gruapp.onrender.com/api/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -64,7 +64,7 @@ export default function Register() {
 
     // Redirigir después de cerrar el alert (puedes ajustar el tiempo según tus necesidades)
     setTimeout(() => {
-      window.location.href = '/Login'; // Puedes cambiar esto por la ruta a la que deseas redirigir
+      window.location.href = '/api/login'; // Puedes cambiar esto por la ruta a la que deseas redirigir
     }, 100);
   };
 
